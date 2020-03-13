@@ -1,0 +1,36 @@
+{
+    "name":"my-awesome-module",
+    "version":"0.0.0",
+    "author":"",
+    "location":"SMSMarco/my-awesome-module#v0.0.0",
+    "homepage":"https://github.com/SMSMarco/my-awesome-module",
+    "documentation":"https://github.com/SMSMarco/my-awesome-module",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/SMSMarco/my-awesome-module"
+    },
+    "bugs":"https://github.com/SMSMarco/my-awesome-module/issues",
+    "slug":"my-awesome-module",
+    "shortDescription":"sample module",
+    "description":"sample module",
+    "type":"modules",
+    "dependencies":{},
+    "devDependencies":{
+        "coldbox":"^5.0.0",
+        "testbox":"^3.0.0"
+    },
+    "installPaths":{
+        "testbox":"testbox/",
+        "coldbox":"tests/resources/app/coldbox/"
+    },
+    "scripts":{
+        "postVersion":"package set location='SMSMarco/my-awesome-module#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push && git push --tags"
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
